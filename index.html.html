@@ -1,0 +1,350 @@
+*******<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      margin: auto;
+      width: 70%;
+      height: 100vh;
+      border: 2px solid black;
+    }
+    .head{
+      position: absolute;
+      margin-left: 200px;
+      margin-top: -100px;
+      background-color: black;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+    }
+    .ear-container{
+      display: flex;
+      gap: 4rem;
+      margin-left: 170px;
+      margin-top: -180px;
+    }
+    .ear{
+      margin-top: 200px;
+      background-color: black;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+    }
+    .eye-lid-container{
+      display: flex;
+      margin-top: 30px;
+      margin-left: 70px;
+    }
+    .eye-lid{
+      width: 250px;
+      height: 350px;
+      border-radius: 50%;
+      background-color: bisque;
+    }
+    .right{
+      position: absolute;
+      margin-left: 100px;
+    }
+    .eye-container{
+      display: flex;
+      position: absolute;
+      margin-top: -450px;
+      margin-left: 150px;
+    }
+    .eye-left{
+      background-color: #fff;
+      width: 70px;
+      height: 170px;
+      border: 7px solid black;
+      border-radius: 50%;
+      margin-right: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .eye-right{
+      background-color: #fff;
+      width: 70px;
+      height: 170px;
+      border: 7px solid black;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+    .eye-balls-container{
+      display: flex;
+      position: absolute;
+      margin-top: -300px;
+      margin-left: 200px;
+    }
+    .left-eyeball{
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      margin-top: 50px;
+      margin-left: 0px;
+      width: 40px;
+      height: 50px;
+      border-radius: 50px;
+      background-color: black;
+      div{
+        width: 10px;
+        height: 15px;
+        margin-left: 5px;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+    }
+    .right-eyeball{
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      margin-top: 50px;
+      margin-left: 0px;
+      width: 40px;
+      height: 50px;
+      border-radius: 50px;
+      background-color: black;
+
+      div{
+        width: 10px;
+        height: 15px;
+        margin-left: 15px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: relative;
+        pointer-events: none;
+      
+      }
+
+    }
+    .eye-line{
+      width: 200px;
+      height: 90px;
+      border-top: 7px solid black;
+      border-radius: 50%;
+      margin-top: -290px;
+      background-color: bisque;
+      margin-left: 150px;
+      position: relative;
+
+    }
+    
+   
+    .mouth{
+      width: 500px;
+      height: 250px;
+      border-bottom-left-radius: 100%;
+      border-bottom-right-radius: 100%;
+      border-top-left-radius:100% ;
+      border-top-right-radius:100% ;
+      border: 7px solid black;
+      
+      margin-top: -90px;
+      background-color: bisque;
+    }
+    .nose{
+      width: 200px;
+      height:130px ;
+      border-radius: 50%;
+      background-color: black;
+      margin-top:-80px ;
+      margin-left: 150px;
+      position: absolute;
+      z-index: 4;
+      div{
+        width: 90px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: auto;
+        margin-top: 5px;
+      }
+    }
+
+    .mouth-top-line{
+      width: 300px;
+      height: 100px;
+      border-radius: 50%;
+      border-bottom:7px solid black;
+      margin: auto;
+      position: relative;
+      z-index:3;
+      background-color: bisque;
+    }
+    .open-mouth{
+      width: 200px;
+      height: 200px;
+      background-color: black;
+      margin: auto;
+      border-radius: 50%;
+      margin-top: -100px;
+      position: relative;
+      z-index: 2;
+      /* border: 7px solid black; */
+      overflow: hidden;
+    }
+    .open-mouth-down{
+      width: 250px;
+      height: 200px;
+      background-color: bisque;
+      border-bottom: 10px solid black;
+      margin: auto;
+      border-radius: 50%;
+      margin-top: -190px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tounge-container{
+      display: flex;
+      position: absolute;
+      margin: auto;
+      margin-top: -90px;
+      margin-left: 230px;
+      z-index: 2;
+    }
+    .tounge-left{
+      width: 85px;
+      height: 60px;
+       border-bottom-left-radius: 50%;
+      background-color: rgb(228, 95, 95);     
+     
+      border-top-left-radius: 50%;
+      border-top-right-radius:50% ;
+      border-bottom-right-radius: 50%;
+      position: relative;
+     
+    }
+    .tounge-right{
+      background-color: rgb(228, 95, 95); 
+      width: 80px;
+      height: 50px;
+      border-radius: 50%;
+      position: absolute;
+      margin-left: -50px; 
+      border-top: 5px solid black;
+      z-index: 1;
+    }
+    .bottom-tounge{
+      height: 30px;
+      width: 100px;
+      background-color: rgb(228, 95, 95);
+      border-bottom-right-radius: 50%;
+      border-bottom-left-radius: 50%;
+      position: absolute;
+      margin-top: -58px;
+      margin-left: 200px;
+      z-index: 3;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="ear-container">
+      <div class="ear"></div>
+      <div class="ear"></div>
+    </div>
+    <div class="head">
+      <div class="eye-lid-container">
+        <div class="eye-lid "></div>
+        <div class="eye-lid right"></div>
+
+      </div>
+      <div class="mouth-container">
+        <div class="mouth"></div>
+      </div>
+      <div class="eye-container">
+        <div class="eye-left " id="eye-container" >
+          <div class="left-eyeball" id="eyeball" >
+            <div></div>
+          </div>
+          
+        </div>
+        <div class="eye-right  " id="eye-container2">
+
+          <div class="right-eyeball" id="eyeball2">
+            <div></div>
+          </div>
+        </div>
+       
+      </div>
+      <!-- <div class="eye-balls-container">
+        <div id="eye-container" class="eye-ball left-eye "><div id="eyeball"></div></div>
+        <div id="follower2" class="eye-ball right-eye  "><div></div></div>
+      </div> -->
+      <div class="eye-line"></div>
+      <div class="nose"> <div></div></div>
+      <!-- mouth -->
+       <div class="mouth-top-line"></div>
+       <div class="open-mouth"></div>
+       <div class="open-mouth-down"></div>
+       <div class="tounge-container">
+        <div class="tounge-left"></div>
+        <div class="tounge-right"></div>
+       </div>
+       <div class="bottom-tounge"></div>
+     
+    </div>
+  </div>
+
+  <script > 
+  
+  // document.addEventListener('mousemove' , function(e){
+  // const follower =document.getElementById('follower1');
+  // const follower2 =document.getElementById('follower2');
+
+  // follower.style.left=e.pageX + 'px';
+  // follower.style.top=e.pageY + 'px';
+      
+  // follower2.style.left=e.pageX + 'px';
+  // follower2.style.top=e.pageY + 'px';
+      
+  // });
+
+  const eyeContainer = document.getElementById('eye-container');
+  const eyeball = document.getElementById('eyeball');
+  const eyeRadius = eyeContainer.offsetWidth /2;
+  const eyeballRadius = eyeball.offsetWidth /2;
+  const centerX = eyeContainer.offsetLeft + eyeRadius;
+  const centerY = eyeContainer.offsetTop + eyeRadius;
+
+  document.addEventListener('mousemove',(e)=>{
+    const dx = e.pageX - centerX;
+    const dy =e.pageY  - centerY;
+    const angle = Math.atan2(dy,dx);
+    const distance = Math.min(Math.sqrt(dx * dx + dy * dy),eyeRadius - eyeballRadius);
+    const x =distance * Math.cos(angle);
+    const y =distance * Math.sin(angle);
+
+    eyeball.style.left =  `${eyeRadius + x - eyeballRadius}px`;
+    eyeball.style.top =  `${eyeRadius + y - eyeballRadius}px`;
+  });
+
+  const eyeContainer2 = document.getElementById('eye-container2');
+  const eyeball2 = document.getElementById('eyeball2');
+  const eyeRadius2 = eyeContainer.offsetWidth /2;
+  const eyeballRadius2 = eyeball.offsetWidth /2;
+  const centerX2 = eyeContainer.offsetLeft + eyeRadius;
+  const centerY2 = eyeContainer.offsetTop + eyeRadius;
+
+  document.addEventListener('mousemove',(e)=>{
+    const dx = e.pageX - centerX;
+    const dy =e.pageY  - centerY;
+    const angle = Math.atan2(dy,dx);
+    const distance = Math.min(Math.sqrt(dx * dx + dy * dy),eyeRadius2 - eyeballRadius2);
+    const x =distance * Math.cos(angle);
+    const y =distance * Math.sin(angle);
+
+    eyeball2.style.left =  `${eyeRadius2 + x - eyeballRadius2}px`;
+    eyeball2.style.top =  `${eyeRadius2 + y - eyeballRadius2}px`;
+  });
+
+
+  </script>
+</body>
+</html>
